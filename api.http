@@ -1,0 +1,12 @@
+### Get rooms
+GET http://localhost:4000/api/rooms
+
+### Create room
+POST http://localhost:4000/api/rooms
+Content-Type: application/json
+
+{
+  "room": {
+    "name": "Room 1"
+  }
+}

@@ -7,6 +7,8 @@ defmodule PusherWeb.Router do
 
   scope "/api", PusherWeb do
     pipe_through :api
+
+    resources "/rooms", RoomController, except: [:new, :edit]
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
