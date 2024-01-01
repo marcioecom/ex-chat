@@ -44,7 +44,8 @@ defmodule Pusher.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:nanoid, "~> 2.1.0"}
+      {:nanoid, "~> 2.1.0"},
+      {:cors_plug, "~> 3.0"}
     ]
   end
 
