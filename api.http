@@ -7,6 +7,23 @@ Content-Type: application/json
 
 {
   "room": {
-    "name": "Room 1"
+    "name": "Room 1",
+    "code": "123"
   }
 }
+
+### Get room
+GET http://localhost:4000/api/rooms/1
+
+### Update room
+PUT http://localhost:4000/api/rooms/1
+Content-Type: application/json
+
+{
+  "room": {
+    "name": "Sala da meinha"
+  }
+}
+
+### Delete room
+DELETE http://localhost:4000/api/rooms/4

@@ -12,8 +12,7 @@ defmodule PusherWeb.RoomController do
   end
 
   def create(conn, %{"room" => room_params}) do
-    code = Nanoid.generate(6)
-    room_params = Map.put(room_params, "code", code)
+    room_params = Map.put_new(room_params, "code", Nanoid.generate(6))
 
     with {:ok, %Room{} = room} <- Rooms.create_room(room_params) do
       conn
@@ -24,7 +23,7 @@ defmodule PusherWeb.RoomController do
   end
 
   def show(conn, %{"id" => id}) do
-    room = Rooms.get_room!(id)
+    room = Rooms.get_room_by_code!(id)
     render(conn, :show, room: room)
   end
 
